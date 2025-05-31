@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Weather App Interface</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <section class="viewport">
+        <div class="warning">
+            <p>⚠️ Scroll-driven animations are not supported in this browser. Try this demo in Chrome 115+.</p>
+        </div>
+        <header class="flex-stack">
+            <h1 id="location">
+                Fresh Coast
+                <span id="summary">
+            78° | Sunny
+          </span>
+            </h1>
+            <p class="flex-stack" style="--space: 0.2rem" aria-hidden="true">
+                <span id="temperature" class="current-temp heading-lg">78</span>
+                <span id="condition">Sunny</span>
+            </p>
+            <ul id="range" class="cluster" role="list" style="--justify: center; --gap: 0.5rem">
+                <li>H: 80°</li>
+                <li>L: 63°</li>
+            </ul>
+        </header>
+
+        <main>
+            <article>
+                <h2 id="severe-weather">Severe Weather</h2>
+                <figure class="stack">
+                    <blockquote>
+                        <p>Hurricane Local Statement until 3:00 AM on Saturday. Additional alerts: Tropical Storm Watch, Flood Watch.</p>
+                    </blockquote>
+                    <figcaption>
+                        <cite>National Weather Service</cite>
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h2 id="hourly-forecast">Hourly forecast</h2>
+                <ol class="x-scroll" role="list">
+                    <li class="forecast-tile">
+                        <small>Now</small>
+                        <span>☀️</span>
+                        <span>78°</span>
+                    </li>
+                    <li class="forecast-tile">
+                        <small class="small-caps">5pm</small>
+                        <span>☀️</span>
+                        <span>78°</span>
+                    </li>
+                    <li class="forecast-tile">
+                        <small class="small-caps">6pm</small>
+                        <span>☀️</span>
+                        <span>75°</span>
+                    </li>
+                    <li class="forecast-tile">
+                        <small class="small-caps">7pm</small>
+                        <span>☀️</span>
+                        <span>72°</span>
+                    </li>
+                    <li class="forecast-tile">
+                        <small class="small-caps">7:36pm</small>
+                        <span>🌅</span>
+                        <span>Sunset</span>
+                    </li>
+                    <li class="forecast-tile">
+                        <small class="small-caps">8pm</small>
+                        <span>🌙</span>
+                        <span>70°</span>
+                    </li>
+                    <li class="forecast-tile">
+                        <small class="small-caps">9pm</small>
+                        <span>🌙</span>
+                        <span>68°</span>
+                    </li>
+                    <li class="forecast-tile">
+                        <small class="small-caps">10pm</small>
+                        <span>🌙</span>
+                        <span>67°</span>
+                    </li>
+                    <li class="forecast-tile">
+                        <small class="small-caps">11pm</small>
+                        <span>🌙</span>
+                        <span>67°</span>
+                    </li>
+                    <li class="forecast-tile">
+                        <small class="small-caps">12pm</small>
+                        <span>🌙</span>
+                        <span>66°</span>
+                    </li>
+                    <li class="forecast-tile">
+                        <small class="small-caps">1am</small>
+                        <span>🌙</span>
+                        <span>65°</span>
+                    </li>
+                    <li class="forecast-tile">
+                        <small class="small-caps">2am</small>
+                        <span>🌙</span>
+                        <span>64°</span>
+                    </li>
+                </ol>
+            </article>
+
+            <article>
+                <h2 id="10-day-forecast">10-day forecast</h2>
+                <ol class="flex-stack" role="list" style="--space: 0.75rem">
+                    <li class="forecast-row">
+                        <span>Today</span>
+                        <span>☀️</span>
+                        <div class="range">
+                            <span class="low">63°</span>
+                            <div class="meter"></div>
+                            <span class="high">80°</span>
+                        </div>
+                    </li>
+                    <li class="forecast-row">
+                        <span>Sat</span>
+                        <span>☁️</span>
+                        <div class="range">
+                            <span class="low">63°</span>
+                            <div class="meter"></div>
+                            <span class="high">77°</span>
+                        </div>
+                    </li>
+                    <li class="forecast-row">
+                        <span>Sun</span>
+                        <span>🌧️</span>
+                        <div class="range">
+                            <span class="low">68°</span>
+                            <div class="meter"></div>
+                            <span class="high">79°</span>
+                        </div>
+                    </li>
+                    <li class="forecast-row">
+                        <span>Mon</span>
+                        <span>☀️</span>
+                        <div class="range">
+                            <span class="low">66°</span>
+                            <div class="meter"></div>
+                            <span class="high">77°</span>
+                        </div>
+                    </li>
+                    <li class="forecast-row">
+                        <span>Tue</span>
+                        <span>☀️</span>
+                        <div class="range">
+                            <span class="low">64°</span>
+                            <div class="meter"></div>
+                            <span class="high">79°</span>
+                        </div>
+                    </li>
+                    <li class="forecast-row">
+                        <span>Wed</span>
+                        <span>☀️</span>
+                        <div class="range">
+                            <span class="low">64°</span>
+                            <div class="meter"></div>
+                            <span class="high">81°</span>
+                        </div>
+                    </li>
+                    <li class="forecast-row">
+                        <span>Thu</span>
+                        <span>☀️</span>
+                        <div class="range">
+                            <span class="low">65°</span>
+                            <div class="meter"></div>
+                            <span class="high">80°</span>
+                        </div>
+                    </li>
+                    <li class="forecast-row">
+                        <span>Fri</span>
+                        <span>☀️</span>
+                        <div class="range">
+                            <span class="low">63°</span>
+                            <div class="meter"></div>
+                            <span class="high">82°</span>
+                        </div>
+                    </li>
+                    <li class="forecast-row">
+                        <span>Sat</span>
+                        <span>☀️</span>
+                        <div class="range">
+                            <span class="low">64°</span>
+                            <div class="meter"></div>
+                            <span class="high">84°</span>
+                        </div>
+                    </li>
+                    <li class="forecast-row">
+                        <span>Sun</span>
+                        <span>☀️</span>
+                        <div class="range">
+                            <span class="low">65°</span>
+                            <div class="meter"></div>
+                            <span class="high">86°</span>
+                        </div>
+                    </li>
+                </ol>
+            </article>
+
+            <article>
+                <h2 id="air-quality">Air quality</h2>
+                <div class="stack">
+                    <p>62 - Moderate</p>
+                    <p>Air quality index is 62, which is similar to yesterday at about this time.</p>
+                    <div class="meter" style="margin-top: 1rem"></div>
+                </div>
+            </article>
+
+            <article style="aspect-ratio: 5/3">
+                <h2 id="precipitation">Precipitation</h2>
+            </article>
+
+            <article class="tile">
+                <h2>UV Index</h2>
+            </article>
+            <article class="tile">
+                <h2>Sunset</h2>
+            </article>
+            <article class="tile">
+                <h2>Wind</h2>
+            </article>
+            <article class="tile">
+                <h2>Precipitation</h2>
+            </article>
+            <article class="tile">
+                <h2>Feels Like</h2>
+            </article>
+            <article class="tile">
+                <h2>Humidity</h2>
+            </article>
+            <article class="tile">
+                <h2>Visibility</h2>
+            </article>
+            <article class="tile">
+                <h2>Pressure</h2>
+            </article>
+
+            <footer>
+                <h2>Weather for Fresh Coast</h2>
+                <p><small>Learn more about <a href="#">weather data</a> and <a href="#">map data</a></small></p>
+            </footer>
+
+        </main>
+    </section>
+</body>
+
+</html>
